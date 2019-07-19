@@ -1,0 +1,7 @@
+module claptonver1 (
+							input clk, reset,
+							output [15:0] writedata, dataadr,
+							output memwrite );
+							
+wire [15:0] pc ,instr, readdata;
+

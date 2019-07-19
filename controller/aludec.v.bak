@@ -1,0 +1,29 @@
+module aludec( input [3:0] op3,
+					input [1:0] aluop,
+					output reg [3:0] alucontrol);
+				
+always @ (*)
+	case(aluop)
+		2'b00: alucontrol <= 4'b0000; //add
+		2'b01: alucontrol <= 4'b0001; //sub
+		default : case(op3) 
+		4'b0000: alucontrol <= 4'b0000; //add
+		4'b0001: alucontrol <= 4'b0001; //sub
+		4'b0010: alucontrol <= 4'b0010; //and
+		4'b0011: alucontrol <= 4'b0011; //or
+		4'b0100: alucontrol <= 4'b0100; //xor
+		4'b0101: alucontrol <= 4'b0101; //cmp
+		4'b0110: alucontrol <= 4'b0110; //mov
+		4'b0111: alucontrol <= 4'bxxxx; //reserved
+		4'b1000: alucontrol <= 4'b1000; //sll shift left logical
+		4'b1001: alucontrol <= 4'b1001; //slr shift left rotate
+		4'b1010: alucontrol <= 4'b1010; //srl shift right logical
+		4'b1011: alucontrol <= 4'b1011; //sra shift right arithmetic
+		4'b1100: alucontrol <= 4'b1100; //IN rd
+		4'b1101: alucontrol <= 4'b1101; //OUT rs
+		4'b1110: alucontrol <= 4'b1110; //reserved
+		4'b1111: alucontrol <= 4'b1111; //halt() stop meirei
+		end case
+	end case
+	
+	endmodule

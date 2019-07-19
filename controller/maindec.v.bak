@@ -1,0 +1,4 @@
+module maindec(input [1:0] op,
+					output	memtoreg,memwrite,
+					output	branch, alusrc,
+					output	regdst,

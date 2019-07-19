@@ -1,0 +1,18 @@
+module mux3 #(parameter  width= 8)
+		(input [width-1:0]	a00, a01, a10,
+		 input [1:0] s,
+		 output reg [width-1:0] out
+		  );
+		  
+		 always @ (*) begin
+			case(s)
+				2'b00: out <= a00;
+				2'b01: out <= a01;
+				2'b10: out <= a10;
+				default:
+				out <= 2'bxx;
+			endcase
+			end
+endmodule
+				
+				

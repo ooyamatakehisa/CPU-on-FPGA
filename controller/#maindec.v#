@@ -1,0 +1,38 @@
+module maindec(
+					input [1:0] op1,
+					input [2:0] op2,
+					input [2:0] cond,
+					output	memtoreg, memwrite,
+					output	be, alusrc,
+					output	regwrite,
+					output	jump,
+					output	blt,ble,
+					output	bne,
+					output   li,br,
+					output [1:0] aluop,
+					output	lw);
+					
+reg[13:0] controls;
+
+assign { lw, regwrite, alusrc, li, br , be, blt, ble, bne, memwrite, memtoreg, jump, aluop } = controls; //regdst delete
+
+always @ (*)//when any input
+	case(op1)
+		2'b00: controls <= 14'b10100000001000; //lw(rs),alusrc,memtoreg 
+		2'b01: controls <= 14'b00100000010000; //arusrc,memwrite
+		2'b11: controls <= 14'b01000000000010; //regwrite(rd),aLUop(10)
+		default: case(op2)
+					3'b000: controls <= 14'b00010000000001; //li aluop(01)
+					3'b100: controls <= 14'b00001000000001; //br aluop(01)
+					3'b111: case(cond)
+								3'b000: controls <= 14'b00000100000001 ; //be aluop(01)
+								3'b001: controls <= 14'b00000010000001 ; //blt aluop(01)
+								3'b010: controls <= 14'b00000001000001 ; //ble aluop(01)
+								3'b011: controls <= 14'b00000000100001 ; //bne aluop(01)
+								default: controls <= 14'bxxxxxxxxxxxxxx ;
+								endcase
+					default: controls <= 14'bxxxxxxxxxxxxxx;
+					endcase
+		endcase
+		
+		endmodule

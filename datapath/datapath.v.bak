@@ -1,0 +1,15 @@
+modulue datapath(
+						input clk,reset,
+						input memtoreg,pcsrc,
+						input alusrc, regdst,
+						input regwrite, jump,
+						input [2:0] 	alucontrol,
+						output 			zero,
+						output [15:0] 	pc,
+						input [15:0] 	instr,
+						output[15:0]	aluout, writedata,
+						input [15:0]	readdata );
+						
+wire[4:0] writereg;
+wire [15:0] pcnext,pucnextbr, pcplus4, pcbranch;
+wire []

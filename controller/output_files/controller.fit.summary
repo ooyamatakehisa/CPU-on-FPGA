@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu May  2 19:00:38 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : controller
+Top-level Entity Name : controller
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 19 / 28,848 ( < 1 % )
+    Total combinational functions : 19 / 28,848 ( < 1 % )
+    Dedicated logic registers : 0 / 28,848 ( 0 % )
+Total registers : 0
+Total pins : 28 / 329 ( 9 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

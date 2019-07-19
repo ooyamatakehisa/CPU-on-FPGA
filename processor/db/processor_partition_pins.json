@@ -1,0 +1,377 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "pcF[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pcF[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "regdminM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataM[15]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[10]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[11]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[12]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[13]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[14]",
+					"strict" : false
+				},
+				{
+					"name" : "srcaE[15]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[10]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[11]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[12]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[13]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[14]",
+					"strict" : false
+				},
+				{
+					"name" : "srcbE[15]",
+					"strict" : false
+				},
+				{
+					"name" : "stallF",
+					"strict" : false
+				},
+				{
+					"name" : "memtoregE",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[0]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[1]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[2]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[3]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[4]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[5]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[6]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[7]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[8]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[9]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[10]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[11]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[12]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[13]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[14]",
+					"strict" : false
+				},
+				{
+					"name" : "readdataM[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

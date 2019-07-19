@@ -1,0 +1,21 @@
+module chat(
+	input clock,reset,in,
+	output reg out
+	);
+	reg buffer;
+	reg [4:0] counter;
+	always @(posedge clock or negedge reset) begin
+		if(reset == 0) begin
+			counter <= 0;
+			end else begin
+				counter <= counter + 1;
+				end
+				end
+	always @(posedge clock) begin
+		if(counter==0) begin
+			buffer <= in;
+			out <= buffer;
+			end else begin
+			end
+			end
+			endmodule

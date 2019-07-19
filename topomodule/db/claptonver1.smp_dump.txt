@@ -1,0 +1,8 @@
+
+State Machine - |claptonver1|regp
+Name regp.10000 regp.01000 regp.00100 regp.00010 regp.00001 
+regp.00001 0 0 0 0 0 
+regp.00010 0 0 0 1 1 
+regp.00100 0 0 1 0 1 
+regp.01000 0 1 0 0 1 
+regp.10000 1 0 0 0 1 

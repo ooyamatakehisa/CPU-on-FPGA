@@ -1,0 +1,21 @@
+module controller(
+						input [1:0] op1, //[15:14]
+						input [3:0] op3, //[7:4]
+						input zero,
+						output	memtoreg,memwrite,
+						output	pcsrc, alusrc,
+						output	regwrite,  //delete regdst
+						output	jump,
+						output [3:0] alucontrol);
+
+wire [1:0] aloup;
+wire branch;
+
+	maindec md(op1, memtoreg, memwrite, branch, alusrc, regwrite, jump, aluop);
+	aludec ad(op3, aluop, alucontrol);
+
+	assign pcsrc = branch & zero;
+        assign sssss = branch & S;
+   
+	
+   endmodule

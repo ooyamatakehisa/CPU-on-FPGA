@@ -1,0 +1,109 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "memtoregD",
+					"strict" : false
+				},
+				{
+					"name" : "memwriteD",
+					"strict" : false
+				},
+				{
+					"name" : "alusrcD",
+					"strict" : false
+				},
+				{
+					"name" : "regwriteD",
+					"strict" : false
+				},
+				{
+					"name" : "liD",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "haltD",
+					"strict" : false
+				},
+				{
+					"name" : "branchD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "branchD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "branchD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "branchD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "branchD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "op1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op2[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op3[3]",
+					"strict" : false
+				},
+				{
+					"name" : "op3[0]",
+					"strict" : false
+				},
+				{
+					"name" : "op3[1]",
+					"strict" : false
+				},
+				{
+					"name" : "op3[2]",
+					"strict" : false
+				},
+				{
+					"name" : "op2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cond[1]",
+					"strict" : false
+				},
+				{
+					"name" : "cond[0]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

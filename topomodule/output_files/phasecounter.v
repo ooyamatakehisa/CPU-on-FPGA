@@ -1,0 +1,17 @@
+module phasecounter(
+	input clk,reset,
+	output reg [5:0] regp
+	);
+	
+	always @(posedge clk or posedge reset)begin
+		if (reset) regp <= 6'b000001;
+		else begin
+			if (regp == 6'b00001)regp <= 6'b000010;
+			else if(regp == 6'b000010) regp <= 6'b000100;
+			else if(regp == 6'b000100) regp <= 6'b001000;
+			else if(regp == 6'b001000) regp <= 6'b010000;
+			else if(regp == 6'b010000) regp <= 6'b100000;
+			else if(regp == 6'b100000) regp <= 6'b000001;
+		end
+		end
+endmodule

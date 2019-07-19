@@ -1,0 +1,15 @@
+module pcbranch(
+					 input [4:0] branchM,
+					 input ZM, SM, VM,
+					 output pcsrcM
+);
+
+
+		always @(*)begin
+			if(branchM[4] ||(branchM[0] & ZM ) || (branchM[1] & (SM ^ VM)) || (branchM[2] & (ZM || (SM ^ VM)))|| (branchM[3] & ~ZM)) begin
+					assign pcsrcM = 1;
+					end else 
+					assign pcsrcM = 0;
+			end
+		end
+endmodule

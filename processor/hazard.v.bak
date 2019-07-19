@@ -1,0 +1,7 @@
+module hazard(
+					input [2:0] rs
+					output reg
+)
+
+		always @(*) begin
+		if(rsE == writeregM) 

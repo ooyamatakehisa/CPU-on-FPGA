@@ -1,0 +1,23 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/claptonver1 {/export/home/016/a0163072/CPU/claptonver1/claptonver1.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/processor {/export/home/016/a0163072/CPU/processor/processor.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/controller {/export/home/016/a0163072/CPU/controller/controller.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/controller {/export/home/016/a0163072/CPU/controller/maindec.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/controller {/export/home/016/a0163072/CPU/controller/aludec.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/datapath.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/flopr.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/adder.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/mux2.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/regfile.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/signext.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git {/export/home/016/a0163072/CPU/git/ALU.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git {/export/home/016/a0163072/CPU/git/IM.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git {/export/home/016/a0163072/CPU/git/DM.v}
+vlog -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/datapath {/export/home/016/a0163072/CPU/datapath/sl2.v}
+

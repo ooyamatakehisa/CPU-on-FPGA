@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at datapath.v(7): object "SE" differs only in case from object "se" in the same scope File: /export/home/016/a0163072/CPU/git/datapath/datapath.v Line: 7
+Warning (10268): Verilog HDL information at ALU.v(40): always construct contains both blocking and non-blocking assignments File: /export/home/016/a0163072/CPU/git/datapath/ALU.v Line: 40

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim
+vclaptonver1
+Z1 !s110 1558854338
+!i10b 1
+!s100 O2oQB2cadbYjnV[C4WiA13
+I`R;o@9Y<@[AB>7AbTYa3B2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1558854328
+8claptonver1_7_1200mv_100c_slow.vo
+Fclaptonver1_7_1200mv_100c_slow.vo
+L0 31
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1558854338.000000
+!s107 claptonver1_7_1200mv_100c_slow.vo|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+.|claptonver1_7_1200mv_100c_slow.vo|
+!i113 1
+Z5 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+.
+Z6 tCvgOpt 0
+vclaptonver1_vlg_tst
+R1
+!i10b 1
+!s100 [k_CL`X9[<`KRoMY^UVj60
+I?zC=@l61GHOPMMiWSQQO11
+R2
+R0
+w1558853050
+8/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt
+F/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt
+L0 28
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim|/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim
+R6

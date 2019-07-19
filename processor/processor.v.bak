@@ -1,0 +1,8 @@
+module processor (
+						input clk, reset,
+						output[15:0] pc,
+						input [15:0] instr,
+						output memwrite,
+						output [15:0] aluout,writedata,
+						input [15:0] readdata );
+						

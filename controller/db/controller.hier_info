@@ -1,0 +1,99 @@
+|controller
+op1[0] => op1[0].IN1
+op1[1] => op1[1].IN1
+op2[0] => op2[0].IN1
+op2[1] => op2[1].IN1
+op2[2] => op2[2].IN1
+cond[0] => cond[0].IN1
+cond[1] => cond[1].IN1
+cond[2] => cond[2].IN1
+op3[0] => op3[0].IN1
+op3[1] => op3[1].IN1
+op3[2] => op3[2].IN1
+op3[3] => op3[3].IN1
+memtoregD <= maindec:md.port3
+memwriteD <= maindec:md.port4
+alusrcD <= maindec:md.port6
+regwriteD <= maindec:md.port7
+jumpD <= maindec:md.port8
+liD <= maindec:md.port12
+alucontrolD[0] <= aludec:ad.port2
+alucontrolD[1] <= aludec:ad.port2
+alucontrolD[2] <= aludec:ad.port2
+alucontrolD[3] <= aludec:ad.port2
+haltD <= aludec:ad.port3
+branchD[0] <= maindec:md.port13
+branchD[1] <= maindec:md.port11
+branchD[2] <= maindec:md.port10
+branchD[3] <= maindec:md.port9
+branchD[4] <= maindec:md.port5
+
+
+|controller|maindec:md
+op1[0] => Mux1.IN5
+op1[0] => Decoder1.IN1
+op1[1] => Mux1.IN4
+op1[1] => Decoder1.IN0
+op1[1] => alusrc.DATAIN
+op2[0] => ~NO_FANOUT~
+op2[1] => Mux0.IN5
+op2[1] => controls.OUTPUTSELECT
+op2[1] => controls.OUTPUTSELECT
+op2[1] => controls.OUTPUTSELECT
+op2[1] => controls.OUTPUTSELECT
+op2[2] => Mux0.IN4
+op2[2] => Mux1.IN3
+op2[2] => controls.DATAB
+cond[0] => Decoder0.IN1
+cond[1] => Decoder0.IN0
+cond[2] => ~NO_FANOUT~
+memtoreg <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+memwrite <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+be <= controls.DB_MAX_OUTPUT_PORT_TYPE
+alusrc <= op1[1].DB_MAX_OUTPUT_PORT_TYPE
+regwrite <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+jump <= <GND>
+blt <= controls.DB_MAX_OUTPUT_PORT_TYPE
+ble <= controls.DB_MAX_OUTPUT_PORT_TYPE
+bne <= controls.DB_MAX_OUTPUT_PORT_TYPE
+li <= controls.DB_MAX_OUTPUT_PORT_TYPE
+br <= controls.DB_MAX_OUTPUT_PORT_TYPE
+aluop[0] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+aluop[1] <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+lw <= Decoder1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|controller|aludec:ad
+op3[0] => Decoder0.IN3
+op3[0] => Mux1.IN10
+op3[0] => Mux0.IN10
+op3[1] => Decoder0.IN2
+op3[1] => Mux1.IN9
+op3[1] => Mux0.IN9
+op3[1] => Mux2.IN10
+op3[1] => Mux3.IN10
+op3[1] => Mux4.IN10
+op3[1] => Mux5.IN10
+op3[2] => Decoder0.IN1
+op3[2] => Mux1.IN8
+op3[2] => Mux0.IN8
+op3[2] => Mux2.IN9
+op3[2] => Mux3.IN9
+op3[2] => Mux4.IN9
+op3[2] => Mux5.IN9
+op3[3] => Decoder0.IN0
+op3[3] => Mux2.IN8
+op3[3] => Mux3.IN8
+op3[3] => Mux4.IN8
+op3[3] => Mux5.IN8
+aluop[0] => Equal0.IN3
+aluop[0] => Equal1.IN3
+aluop[1] => Equal0.IN2
+aluop[1] => Equal1.IN2
+alucontrol[0] <= alucontrol[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+alucontrol[1] <= alucontrol[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+alucontrol[2] <= alucontrol[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+alucontrol[3] <= alucontrol[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+halt <= halt.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri May 31 16:00:40 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : claptonver1
+Top-level Entity Name : claptonver1
+Family : Cyclone IV E
+Total logic elements : 1,409
+    Total combinational functions : 1,228
+    Dedicated logic registers : 557
+Total registers : 557
+Total pins : 180
+Total virtual pins : 0
+Total memory bits : 131,072
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 1

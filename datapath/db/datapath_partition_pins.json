@@ -1,0 +1,281 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SE",
+					"strict" : false
+				},
+				{
+					"name" : "ZE",
+					"strict" : false
+				},
+				{
+					"name" : "VE",
+					"strict" : false
+				},
+				{
+					"name" : "CE",
+					"strict" : false
+				},
+				{
+					"name" : "pc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[8]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[9]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[10]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[11]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[12]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[13]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[14]",
+					"strict" : false
+				},
+				{
+					"name" : "pc[15]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[10]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[11]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[12]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[13]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[14]",
+					"strict" : false
+				},
+				{
+					"name" : "aluoutE[15]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[7]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[15]",
+					"strict" : false
+				},
+				{
+					"name" : "alusrcE",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[14]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[13]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[12]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[11]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[10]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[9]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[8]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[7]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[6]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[6]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[5]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[5]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[4]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[4]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[3]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[2]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[1]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "instrD[0]",
+					"strict" : false
+				},
+				{
+					"name" : "writedataE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolE[0]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolE[1]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolE[3]",
+					"strict" : false
+				},
+				{
+					"name" : "alucontrolE[2]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "pcsrcM",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

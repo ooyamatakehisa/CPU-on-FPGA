@@ -1,0 +1,18 @@
+module regfile (
+						input				clk,
+						input 			regwrite,
+						input [2:0] 	rd,rs,
+						input [15:0] 	result,
+						output [15:0]	rd1, rd2 );
+					
+reg [15:0] rf[7:0] ;  //rf[15:0]->[7:0] change
+
+always @ (posedge clk)
+		if(regwrite) rf[rd] <= result;
+		
+//assign rd1 = (rd != 0) ? rf[rd] :0 ; //if(rd1==0) -> 0 else -> rd
+//assign rd2 = (rs != 0) ? rf[rs] :0 ; //if(rd2==0) -> 0 else -> rs
+assign rd1 = rf[rd];
+assign rd2 = rf[rs];
+ 
+endmodule

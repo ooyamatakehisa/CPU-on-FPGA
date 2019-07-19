@@ -1,0 +1,930 @@
+Analysis & Synthesis report for processor
+Thu May  9 15:50:08 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. Removed Registers Triggering Further Register Optimizations
+ 10. General Register Statistics
+ 11. Parameter Settings for User Entity Instance: flopenablepc:pcreg
+ 12. Parameter Settings for User Entity Instance: mux2:pcbrmux
+ 13. Parameter Settings for User Entity Instance: flopenable:IFID
+ 14. Parameter Settings for User Entity Instance: flopr:IDEX
+ 15. Parameter Settings for User Entity Instance: mux3:aemux
+ 16. Parameter Settings for User Entity Instance: mux3:bemux
+ 17. Parameter Settings for User Entity Instance: mux2:srcbmux
+ 18. Parameter Settings for User Entity Instance: mux2:writeregdestination
+ 19. Parameter Settings for User Entity Instance: flopr:EXMEM
+ 20. Parameter Settings for User Entity Instance: mux2:limux
+ 21. Parameter Settings for User Entity Instance: flopr:MEMWB
+ 22. Parameter Settings for User Entity Instance: mux2:regwritemux
+ 23. Port Connectivity Checks: "hazard:haz"
+ 24. Port Connectivity Checks: "adder:pcadd2"
+ 25. Port Connectivity Checks: "ALU:alu"
+ 26. Port Connectivity Checks: "flopr:IDEX"
+ 27. Port Connectivity Checks: "flopenable:IFID"
+ 28. Port Connectivity Checks: "mux2:pcbrmux"
+ 29. Port Connectivity Checks: "adder:pcadd1"
+ 30. Port Connectivity Checks: "flopenablepc:pcreg"
+ 31. Post-Synthesis Netlist Statistics for Top Partition
+ 32. Elapsed Time Per Partition
+ 33. Analysis & Synthesis Messages
+ 34. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu May  9 15:50:08 2019           ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Standard Edition ;
+; Revision Name                      ; processor                                       ;
+; Top-level Entity Name              ; processor                                       ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 139                                             ;
+;     Total combinational functions  ; 72                                              ;
+;     Dedicated logic registers      ; 107                                             ;
+; Total registers                    ; 107                                             ;
+; Total pins                         ; 135                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE30F29I7       ;                    ;
+; Top-level entity name                                                      ; processor          ; processor          ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+; processor.v                      ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/processor/processor.v    ;         ;
+; flopenable.v                     ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/processor/flopenable.v   ;         ;
+; pcbranch.v                       ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/processor/pcbranch.v     ;         ;
+; hazard.v                         ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/processor/hazard.v       ;         ;
+; ../datapath/mux3.v               ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/datapath/mux3.v          ;         ;
+; flopenablepc.v                   ; yes             ; User Verilog HDL File        ; /export/home/016/a0163072/CPU/git/processor/flopenablepc.v ;         ;
+; controller.v                     ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/controller/controller.v  ;         ;
+; maindec.v                        ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/controller/maindec.v     ;         ;
+; aludec.v                         ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/controller/aludec.v      ;         ;
+; adder.v                          ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/adder.v        ;         ;
+; mux2.v                           ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/mux2.v         ;         ;
+; regfile.v                        ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/regfile.v      ;         ;
+; signext.v                        ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/signext.v      ;         ;
+; flopr.v                          ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/flopr.v        ;         ;
+; ALU.v                            ; yes             ; Auto-Found Verilog HDL File  ; /export/home/016/a0163072/CPU/git/processor/ALU.v          ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 139       ;
+;                                             ;           ;
+; Total combinational functions               ; 72        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 32        ;
+;     -- 3 input functions                    ; 16        ;
+;     -- <=2 input functions                  ; 24        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 51        ;
+;     -- arithmetic mode                      ; 21        ;
+;                                             ;           ;
+; Total registers                             ; 107       ;
+;     -- Dedicated logic registers            ; 107       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 135       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 107       ;
+; Total fan-out                               ; 759       ;
+; Average fan-out                             ; 1.69      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+--------------+
+; |processor                 ; 72 (0)              ; 107 (0)                   ; 0           ; 0            ; 0       ; 0         ; 135  ; 0            ; |processor                    ; processor    ; work         ;
+;    |flopenablepc:pcreg|    ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|flopenablepc:pcreg ; flopenablepc ; work         ;
+;    |flopr:EXMEM|           ; 16 (16)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|flopr:EXMEM        ; flopr        ; work         ;
+;    |flopr:IDEX|            ; 0 (0)               ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|flopr:IDEX         ; flopr        ; work         ;
+;    |flopr:MEMWB|           ; 0 (0)               ; 17 (17)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|flopr:MEMWB        ; flopr        ; work         ;
+;    |mux2:srcbmux|          ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux2:srcbmux       ; mux2         ; work         ;
+;    |mux3:aemux|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux3:aemux         ; mux3         ; work         ;
+;    |mux3:bemux|            ; 16 (16)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|mux3:bemux         ; mux3         ; work         ;
+;    |regfile:re|            ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|regfile:re         ; regfile      ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; flopr:IDEX|q[0..21]                     ; Stuck at GND due to stuck port data_in ;
+; flopr:EXMEM|q[3..18]                    ; Stuck at GND due to stuck port data_in ;
+; flopr:IDEX|q[54,59,63]                  ; Stuck at GND due to stuck port data_in ;
+; flopr:EXMEM|q[0..2,51,52,54]            ; Stuck at GND due to stuck port data_in ;
+; flopr:IDEX|q[56..58]                    ; Stuck at GND due to stuck port data_in ;
+; flopr:MEMWB|q[0..2,35]                  ; Stuck at GND due to stuck port data_in ;
+; flopr:IDEX|q[55]                        ; Stuck at GND due to stuck port data_in ;
+; flopenable:IFID|q[0..15]                ; Lost fanout                            ;
+; flopr:IDEX|q[62,64]                     ; Merged with flopr:IDEX|q[61]           ;
+; flopr:MEMWB|q[37]                       ; Merged with flopr:MEMWB|q[36]          ;
+; flopr:EXMEM|q[55]                       ; Merged with flopr:EXMEM|q[53]          ;
+; regfile:re|rf~16                        ; Lost fanout                            ;
+; regfile:re|rf~17                        ; Lost fanout                            ;
+; regfile:re|rf~18                        ; Lost fanout                            ;
+; regfile:re|rf~19                        ; Lost fanout                            ;
+; regfile:re|rf~20                        ; Lost fanout                            ;
+; regfile:re|rf~21                        ; Lost fanout                            ;
+; regfile:re|rf~22                        ; Lost fanout                            ;
+; regfile:re|rf~23                        ; Lost fanout                            ;
+; regfile:re|rf~24                        ; Lost fanout                            ;
+; regfile:re|rf~25                        ; Lost fanout                            ;
+; regfile:re|rf~26                        ; Lost fanout                            ;
+; regfile:re|rf~27                        ; Lost fanout                            ;
+; regfile:re|rf~28                        ; Lost fanout                            ;
+; regfile:re|rf~29                        ; Lost fanout                            ;
+; regfile:re|rf~30                        ; Lost fanout                            ;
+; regfile:re|rf~31                        ; Lost fanout                            ;
+; regfile:re|rf~32                        ; Lost fanout                            ;
+; regfile:re|rf~33                        ; Lost fanout                            ;
+; regfile:re|rf~34                        ; Lost fanout                            ;
+; regfile:re|rf~35                        ; Lost fanout                            ;
+; regfile:re|rf~36                        ; Lost fanout                            ;
+; regfile:re|rf~37                        ; Lost fanout                            ;
+; regfile:re|rf~38                        ; Lost fanout                            ;
+; regfile:re|rf~39                        ; Lost fanout                            ;
+; regfile:re|rf~40                        ; Lost fanout                            ;
+; regfile:re|rf~41                        ; Lost fanout                            ;
+; regfile:re|rf~42                        ; Lost fanout                            ;
+; regfile:re|rf~43                        ; Lost fanout                            ;
+; regfile:re|rf~44                        ; Lost fanout                            ;
+; regfile:re|rf~45                        ; Lost fanout                            ;
+; regfile:re|rf~46                        ; Lost fanout                            ;
+; regfile:re|rf~47                        ; Lost fanout                            ;
+; regfile:re|rf~48                        ; Lost fanout                            ;
+; regfile:re|rf~49                        ; Lost fanout                            ;
+; regfile:re|rf~50                        ; Lost fanout                            ;
+; regfile:re|rf~51                        ; Lost fanout                            ;
+; regfile:re|rf~52                        ; Lost fanout                            ;
+; regfile:re|rf~53                        ; Lost fanout                            ;
+; regfile:re|rf~54                        ; Lost fanout                            ;
+; regfile:re|rf~55                        ; Lost fanout                            ;
+; regfile:re|rf~56                        ; Lost fanout                            ;
+; regfile:re|rf~57                        ; Lost fanout                            ;
+; regfile:re|rf~58                        ; Lost fanout                            ;
+; regfile:re|rf~59                        ; Lost fanout                            ;
+; regfile:re|rf~60                        ; Lost fanout                            ;
+; regfile:re|rf~61                        ; Lost fanout                            ;
+; regfile:re|rf~62                        ; Lost fanout                            ;
+; regfile:re|rf~63                        ; Lost fanout                            ;
+; regfile:re|rf~64                        ; Lost fanout                            ;
+; regfile:re|rf~65                        ; Lost fanout                            ;
+; regfile:re|rf~66                        ; Lost fanout                            ;
+; regfile:re|rf~67                        ; Lost fanout                            ;
+; regfile:re|rf~68                        ; Lost fanout                            ;
+; regfile:re|rf~69                        ; Lost fanout                            ;
+; regfile:re|rf~70                        ; Lost fanout                            ;
+; regfile:re|rf~71                        ; Lost fanout                            ;
+; regfile:re|rf~72                        ; Lost fanout                            ;
+; regfile:re|rf~73                        ; Lost fanout                            ;
+; regfile:re|rf~74                        ; Lost fanout                            ;
+; regfile:re|rf~75                        ; Lost fanout                            ;
+; regfile:re|rf~76                        ; Lost fanout                            ;
+; regfile:re|rf~77                        ; Lost fanout                            ;
+; regfile:re|rf~78                        ; Lost fanout                            ;
+; regfile:re|rf~79                        ; Lost fanout                            ;
+; regfile:re|rf~80                        ; Lost fanout                            ;
+; regfile:re|rf~81                        ; Lost fanout                            ;
+; regfile:re|rf~82                        ; Lost fanout                            ;
+; regfile:re|rf~83                        ; Lost fanout                            ;
+; regfile:re|rf~84                        ; Lost fanout                            ;
+; regfile:re|rf~85                        ; Lost fanout                            ;
+; regfile:re|rf~86                        ; Lost fanout                            ;
+; regfile:re|rf~87                        ; Lost fanout                            ;
+; regfile:re|rf~88                        ; Lost fanout                            ;
+; regfile:re|rf~89                        ; Lost fanout                            ;
+; regfile:re|rf~90                        ; Lost fanout                            ;
+; regfile:re|rf~91                        ; Lost fanout                            ;
+; regfile:re|rf~92                        ; Lost fanout                            ;
+; regfile:re|rf~93                        ; Lost fanout                            ;
+; regfile:re|rf~94                        ; Lost fanout                            ;
+; regfile:re|rf~95                        ; Lost fanout                            ;
+; regfile:re|rf~96                        ; Lost fanout                            ;
+; regfile:re|rf~97                        ; Lost fanout                            ;
+; regfile:re|rf~98                        ; Lost fanout                            ;
+; regfile:re|rf~99                        ; Lost fanout                            ;
+; regfile:re|rf~100                       ; Lost fanout                            ;
+; regfile:re|rf~101                       ; Lost fanout                            ;
+; regfile:re|rf~102                       ; Lost fanout                            ;
+; regfile:re|rf~103                       ; Lost fanout                            ;
+; regfile:re|rf~104                       ; Lost fanout                            ;
+; regfile:re|rf~105                       ; Lost fanout                            ;
+; regfile:re|rf~106                       ; Lost fanout                            ;
+; regfile:re|rf~107                       ; Lost fanout                            ;
+; regfile:re|rf~108                       ; Lost fanout                            ;
+; regfile:re|rf~109                       ; Lost fanout                            ;
+; regfile:re|rf~110                       ; Lost fanout                            ;
+; regfile:re|rf~111                       ; Lost fanout                            ;
+; regfile:re|rf~112                       ; Lost fanout                            ;
+; regfile:re|rf~113                       ; Lost fanout                            ;
+; regfile:re|rf~114                       ; Lost fanout                            ;
+; regfile:re|rf~115                       ; Lost fanout                            ;
+; regfile:re|rf~116                       ; Lost fanout                            ;
+; regfile:re|rf~117                       ; Lost fanout                            ;
+; regfile:re|rf~118                       ; Lost fanout                            ;
+; regfile:re|rf~119                       ; Lost fanout                            ;
+; regfile:re|rf~120                       ; Lost fanout                            ;
+; regfile:re|rf~121                       ; Lost fanout                            ;
+; regfile:re|rf~122                       ; Lost fanout                            ;
+; regfile:re|rf~123                       ; Lost fanout                            ;
+; regfile:re|rf~124                       ; Lost fanout                            ;
+; regfile:re|rf~125                       ; Lost fanout                            ;
+; regfile:re|rf~126                       ; Lost fanout                            ;
+; regfile:re|rf~127                       ; Lost fanout                            ;
+; flopr:MEMWB|q[19..34]                   ; Lost fanout                            ;
+; Total Number of Removed Registers = 203 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++------------------+---------------------------+-----------------------------------------------------------------------------+
+; Register name    ; Reason for Removal        ; Registers Removed due to This Register                                      ;
++------------------+---------------------------+-----------------------------------------------------------------------------+
+; flopr:IDEX|q[21] ; Stuck at GND              ; flopr:EXMEM|q[2], flopr:MEMWB|q[2], flopr:MEMWB|q[19], flopr:MEMWB|q[20],   ;
+;                  ; due to stuck port data_in ; flopr:MEMWB|q[21], flopr:MEMWB|q[22], flopr:MEMWB|q[23], flopr:MEMWB|q[24], ;
+;                  ;                           ; flopr:MEMWB|q[25], flopr:MEMWB|q[26], flopr:MEMWB|q[27], flopr:MEMWB|q[28], ;
+;                  ;                           ; flopr:MEMWB|q[29], flopr:MEMWB|q[30], flopr:MEMWB|q[34]                     ;
+; flopr:IDEX|q[18] ; Stuck at GND              ; flopr:MEMWB|q[31], flopr:MEMWB|q[32], flopr:MEMWB|q[33]                     ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[20] ; Stuck at GND              ; flopr:EXMEM|q[1], flopr:MEMWB|q[1]                                          ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[19] ; Stuck at GND              ; flopr:EXMEM|q[0], flopr:MEMWB|q[0]                                          ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[54] ; Stuck at GND              ; flopr:EXMEM|q[51], flopr:MEMWB|q[35]                                        ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[59] ; Stuck at GND              ; flopr:EXMEM|q[52]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[63] ; Stuck at GND              ; flopr:EXMEM|q[54]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[0]  ; Stuck at GND              ; flopr:EXMEM|q[3]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[1]  ; Stuck at GND              ; flopr:EXMEM|q[4]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[2]  ; Stuck at GND              ; flopr:EXMEM|q[5]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[3]  ; Stuck at GND              ; flopr:EXMEM|q[6]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[4]  ; Stuck at GND              ; flopr:EXMEM|q[7]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[5]  ; Stuck at GND              ; flopr:EXMEM|q[8]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[6]  ; Stuck at GND              ; flopr:EXMEM|q[9]                                                            ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[7]  ; Stuck at GND              ; flopr:EXMEM|q[10]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[8]  ; Stuck at GND              ; flopr:EXMEM|q[11]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[9]  ; Stuck at GND              ; flopr:EXMEM|q[12]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[10] ; Stuck at GND              ; flopr:EXMEM|q[13]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[11] ; Stuck at GND              ; flopr:EXMEM|q[14]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[12] ; Stuck at GND              ; flopr:EXMEM|q[15]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[13] ; Stuck at GND              ; flopr:EXMEM|q[16]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[14] ; Stuck at GND              ; flopr:EXMEM|q[17]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
+; flopr:IDEX|q[15] ; Stuck at GND              ; flopr:EXMEM|q[18]                                                           ;
+;                  ; due to stuck port data_in ;                                                                             ;
++------------------+---------------------------+-----------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 107   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 91    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenablepc:pcreg ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; WIDTH          ; 8     ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:pcbrmux ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopenable:IFID ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopr:IDEX ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 65    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3:aemux ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux3:bemux ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:srcbmux ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; WIDTH          ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:writeregdestination ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 3     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopr:EXMEM ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; WIDTH          ; 56    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:limux ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; WIDTH          ; 16    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopr:MEMWB ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; WIDTH          ; 38    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:regwritemux ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 16    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "hazard:haz"                                                                                                                                                                             ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rsD       ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "rsD[2..1]" will be connected to GND.                                        ;
+; rdD       ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "rdD[2..1]" will be connected to GND.                                        ;
+; writeregM ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; writeregW ; Input  ; Warning  ; Input port expression (3 bits) is wider than the input port (1 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts.   ;
+; forwardAE ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.              ;
+; forwardBE ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND.              ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:pcadd2"                                                                                                          ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (1 bits) it drives; bit(s) "y[15..1]" have no fanouts ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:alu"                                                                            ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; C    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flopr:IDEX"                                                                          ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                             ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+; q[60] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flopenable:IFID"                                                                                                                                                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d    ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q    ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mux2:pcbrmux"                                                                                                                               ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                      ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; d1   ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "d1[15..1]" will be connected to GND. ;
++------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder:pcadd1"                                                                                                                                    ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                       ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+; b        ; Input ; Warning  ; Input port expression (15 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "b[15..15]" will be connected to GND. ;
+; b[14..1] ; Input ; Info     ; Stuck at GND                                                                                                                                  ;
+; b[1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                  ;
++----------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "flopenablepc:pcreg"                                                                                                                                                               ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                           ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d    ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (8 bits) it drives.  The 8 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q    ; Output ; Warning  ; Output or bidir port (8 bits) is smaller than the port expression (16 bits) it drives.  The 8 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 135                         ;
+; cycloneiii_ff         ; 107                         ;
+;     CLR               ; 84                          ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 7                           ;
+; cycloneiii_lcell_comb ; 73                          ;
+;     arith             ; 21                          ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 16                          ;
+;     normal            ; 52                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 18                          ;
+;         4 data inputs ; 32                          ;
+;                       ;                             ;
+; Max LUT depth         ; 4.50                        ;
+; Average LUT depth     ; 2.28                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+    Info: Processing started: Thu May  9 15:49:57 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off processor -c processor
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file processor.v
+    Info (12023): Found entity 1: processor File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flopenable.v
+    Info (12023): Found entity 1: flopenable File: /export/home/016/a0163072/CPU/git/processor/flopenable.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file pcbranch.v
+    Info (12023): Found entity 1: pcbranch File: /export/home/016/a0163072/CPU/git/processor/pcbranch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hazard.v
+    Info (12023): Found entity 1: hazard File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /export/home/016/a0163072/CPU/git/datapath/mux3.v
+    Info (12023): Found entity 1: mux3 File: /export/home/016/a0163072/CPU/git/datapath/mux3.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flopenablepc.v
+    Info (12023): Found entity 1: flopenablepc File: /export/home/016/a0163072/CPU/git/processor/flopenablepc.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at processor.v(60): created implicit net for "pcbranchD" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 60
+Warning (10236): Verilog HDL Implicit Net warning at processor.v(130): created implicit net for "rsD" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 130
+Warning (10236): Verilog HDL Implicit Net warning at processor.v(130): created implicit net for "rdD" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 130
+Info (12127): Elaborating entity "processor" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at processor.v(25): object "jumpE" assigned a value but never read File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 25
+Warning (12125): Using design file /export/home/016/a0163072/CPU/git/controller/controller.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: controller File: /export/home/016/a0163072/CPU/git/controller/controller.v Line: 1
+Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 48
+Warning (12125): Using design file /export/home/016/a0163072/CPU/git/controller/maindec.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: maindec File: /export/home/016/a0163072/CPU/git/controller/maindec.v Line: 1
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:md" File: /export/home/016/a0163072/CPU/git/controller/controller.v Line: 16
+Warning (10230): Verilog HDL assignment warning at maindec.v(17): truncated value with size 14 to match size of target (13) File: /export/home/016/a0163072/CPU/git/controller/maindec.v Line: 17
+Warning (12125): Using design file /export/home/016/a0163072/CPU/git/controller/aludec.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: aludec File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 1
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:ad" File: /export/home/016/a0163072/CPU/git/controller/controller.v Line: 17
+Warning (10240): Verilog HDL Always Construct warning at aludec.v(7): inferring latch(es) for variable "alucontrol", which holds its previous value in one or more paths through the always construct File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (10041): Inferred latch for "alucontrol[0]" at aludec.v(7) File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (10041): Inferred latch for "alucontrol[1]" at aludec.v(7) File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (10041): Inferred latch for "alucontrol[2]" at aludec.v(7) File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (10041): Inferred latch for "alucontrol[3]" at aludec.v(7) File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (12128): Elaborating entity "flopenablepc" for hierarchy "flopenablepc:pcreg" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 57
+Warning (12125): Using design file adder.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: adder File: /export/home/016/a0163072/CPU/git/processor/adder.v Line: 1
+Info (12128): Elaborating entity "adder" for hierarchy "adder:pcadd1" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 58
+Warning (12125): Using design file mux2.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: mux2 File: /export/home/016/a0163072/CPU/git/processor/mux2.v Line: 1
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:pcbrmux" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 60
+Info (12128): Elaborating entity "flopenable" for hierarchy "flopenable:IFID" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 63
+Warning (10230): Verilog HDL assignment warning at flopenable.v(8): truncated value with size 32 to match size of target (16) File: /export/home/016/a0163072/CPU/git/processor/flopenable.v Line: 8
+Warning (10230): Verilog HDL assignment warning at flopenable.v(9): truncated value with size 32 to match size of target (16) File: /export/home/016/a0163072/CPU/git/processor/flopenable.v Line: 9
+Warning (10261): Verilog HDL Event Control warning at regfile.v(11): Event Control contains a complex event expression File: /export/home/016/a0163072/CPU/git/processor/regfile.v Line: 11
+Warning (12125): Using design file regfile.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: regfile File: /export/home/016/a0163072/CPU/git/processor/regfile.v Line: 1
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:re" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 69
+Warning (12125): Using design file signext.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: signext File: /export/home/016/a0163072/CPU/git/processor/signext.v Line: 1
+Info (12128): Elaborating entity "signext" for hierarchy "signext:se" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 70
+Warning (12125): Using design file flopr.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: flopr File: /export/home/016/a0163072/CPU/git/processor/flopr.v Line: 1
+Info (12128): Elaborating entity "flopr" for hierarchy "flopr:IDEX" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 76
+Info (12128): Elaborating entity "mux3" for hierarchy "mux3:aemux" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 80
+Warning (10270): Verilog HDL Case Statement warning at mux3.v(9): incomplete case statement has no default case item File: /export/home/016/a0163072/CPU/git/datapath/mux3.v Line: 9
+Warning (10776): Verilog HDL warning at mux3.v(7): variable mux in static task or function mux may have unintended latch behavior File: /export/home/016/a0163072/CPU/git/datapath/mux3.v Line: 7
+Warning (10241): Verilog HDL Function Declaration warning at mux3.v(7): function "mux" may return a Don't Care value because its output register may not be assigned a value in every possible path through the function File: /export/home/016/a0163072/CPU/git/datapath/mux3.v Line: 7
+Warning (10030): Net "mux" at mux3.v(7) has no driver or initial value, using a default initial value '0' File: /export/home/016/a0163072/CPU/git/datapath/mux3.v Line: 7
+Warning (12125): Using design file ALU.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: ALU File: /export/home/016/a0163072/CPU/git/processor/ALU.v Line: 1
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:alu" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 87
+Warning (10230): Verilog HDL assignment warning at ALU.v(27): truncated value with size 32 to match size of target (16) File: /export/home/016/a0163072/CPU/git/processor/ALU.v Line: 27
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:writeregdestination" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 90
+Info (12128): Elaborating entity "flopr" for hierarchy "flopr:EXMEM" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 97
+Info (12128): Elaborating entity "pcbranch" for hierarchy "pcbranch:pcbr" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 104
+Info (12128): Elaborating entity "flopr" for hierarchy "flopr:MEMWB" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 122
+Info (12128): Elaborating entity "hazard" for hierarchy "hazard:haz" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 130
+Warning (10230): Verilog HDL assignment warning at hazard.v(15): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 15
+Warning (10230): Verilog HDL assignment warning at hazard.v(17): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 17
+Warning (10230): Verilog HDL assignment warning at hazard.v(19): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 19
+Warning (10230): Verilog HDL assignment warning at hazard.v(23): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 23
+Warning (10230): Verilog HDL assignment warning at hazard.v(25): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 25
+Warning (10230): Verilog HDL assignment warning at hazard.v(27): truncated value with size 2 to match size of target (1) File: /export/home/016/a0163072/CPU/git/processor/hazard.v Line: 27
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "instrD[3]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[2]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[0]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "instrD[3]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[2]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[0]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "instrD[3]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[2]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[0]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "pcF[15]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[14]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[13]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[12]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[11]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[10]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[9]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[8]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "instrD[3]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[2]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[0]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "pcF[15]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[14]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[13]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[12]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[11]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[10]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[9]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "pcF[8]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (12110): Net "instrD[15]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[14]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[13]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[12]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[11]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[10]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[9]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[8]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[7]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[6]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[5]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[4]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[3]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[2]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "instrD[0]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (12110): Net "forwardAE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+    Warning (12110): Net "forwardBE[1]" is missing source, defaulting to GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 31
+Warning (14026): LATCH primitive "controller:c|aludec:ad|alucontrol[0]" is permanently enabled File: /export/home/016/a0163072/CPU/git/controller/aludec.v Line: 7
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "regfile:re|rf" is uninferred due to inappropriate RAM size File: /export/home/016/a0163072/CPU/git/processor/regfile.v Line: 9
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pcF[8]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[9]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[10]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[11]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[12]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[13]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[14]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "pcF[15]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 3
+    Warning (13410): Pin "instrD[0]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[1]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[2]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[3]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[4]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[5]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[6]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[7]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[8]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[9]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[10]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[11]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[12]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[13]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[14]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "instrD[15]" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 5
+    Warning (13410): Pin "memwriteM" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 6
+    Warning (13410): Pin "haltW" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 10
+    Warning (13410): Pin "pcsrcD" is stuck at GND File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 10
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 144 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file /export/home/016/a0163072/CPU/git/processor/output_files/processor.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 16 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "instrF[0]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[1]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[2]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[3]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[4]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[5]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[6]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[7]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[8]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[9]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[10]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[11]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[12]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[13]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[14]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+    Warning (15610): No output dependent on input pin "instrF[15]" File: /export/home/016/a0163072/CPU/git/processor/processor.v Line: 4
+Info (21057): Implemented 290 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 101 output pins
+    Info (21061): Implemented 155 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 154 warnings
+    Info: Peak virtual memory: 998 megabytes
+    Info: Processing ended: Thu May  9 15:50:08 2019
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:26
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /export/home/016/a0163072/CPU/git/processor/output_files/processor.map.smsg.
+
+

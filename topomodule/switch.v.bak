@@ -1,0 +1,12 @@
+module switch(
+input sw_in,
+output out
+
+);
+reg flag;
+always @(negedge sw_in) begin
+flag <= ~flag;
+end
+assign out = flag;
+
+endmodule

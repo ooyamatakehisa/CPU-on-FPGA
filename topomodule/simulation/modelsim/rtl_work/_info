@@ -1,0 +1,498 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim
+vadder
+Z1 !s110 1558684726
+!i10b 1
+!s100 WXd70J1lhN?E_6DTz>3^D1
+IbJ]mMVWJJWc=c39n5f[GW0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1557208624
+8/export/home/016/a0163072/CPU/git/processor/adder.v
+F/export/home/016/a0163072/CPU/git/processor/adder.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1558684726.000000
+!s107 /export/home/016/a0163072/CPU/git/processor/adder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/adder.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git/processor
+Z7 tCvgOpt 0
+vALU
+Z8 !s110 1558684727
+!i10b 1
+!s100 Ln>6B3NGL3:Ha5XP<?GgF0
+I5=[H2kD:>X7o0oAzbcH4D3
+R2
+R0
+w1558594530
+8/export/home/016/a0163072/CPU/git/processor/ALU.v
+F/export/home/016/a0163072/CPU/git/processor/ALU.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1558684727.000000
+!s107 /export/home/016/a0163072/CPU/git/processor/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/ALU.v|
+!i113 1
+R5
+R6
+R7
+n@a@l@u
+valudec
+R1
+!i10b 1
+!s100 k0aUN]jeFEZo`Q`Z9JiSe3
+I7HlCci62Y_a:IEB:li2fB2
+R2
+R0
+w1557997011
+8/export/home/016/a0163072/CPU/git/controller/aludec.v
+F/export/home/016/a0163072/CPU/git/controller/aludec.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/controller/aludec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/controller|/export/home/016/a0163072/CPU/git/controller/aludec.v|
+!i113 1
+R5
+Z10 !s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git/controller
+R7
+vchat
+R1
+!i10b 1
+!s100 Uig]QP;2FbCSZ:79^G3O>2
+Io1?d<o9nLFFBizzBVX`EQ1
+R2
+R0
+w1558080142
+8/export/home/016/a0163072/CPU/git/claptonver1/chat.v
+F/export/home/016/a0163072/CPU/git/claptonver1/chat.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/chat.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1|/export/home/016/a0163072/CPU/git/claptonver1/chat.v|
+!i113 1
+R5
+Z11 !s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git/claptonver1
+R7
+vclaptonver1
+R1
+!i10b 1
+!s100 JS]IWO[U71jJUzPNnNZlZ0
+I<l2zo2OWPGYPbF]_2A3nG2
+R2
+R0
+w1558684675
+8/export/home/016/a0163072/CPU/git/claptonver1/claptonver1.v
+F/export/home/016/a0163072/CPU/git/claptonver1/claptonver1.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1558684725.000000
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/claptonver1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1|/export/home/016/a0163072/CPU/git/claptonver1/claptonver1.v|
+!i113 1
+R5
+R11
+R7
+vclaptonver1_vlg_tst
+Z12 !s110 1558684728
+!i10b 1
+!s100 BJ]6a^NCRXkonz2cnz_JQ3
+In]VU01eYZzVZWQhG=LD8o2
+R2
+R0
+w1558684671
+8/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt
+F/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt
+L0 28
+R3
+r1
+!s85 0
+31
+Z13 !s108 1558684728.000000
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim|/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim/claptonver1_test1.vt|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git/claptonver1/simulation/modelsim
+R7
+vcontroller
+R1
+!i10b 1
+!s100 c[9f:B58R;akhGLTSDW9L0
+I3YY;OzWRiOoMomA>V5mP93
+R2
+R0
+w1558595987
+8/export/home/016/a0163072/CPU/git/controller/controller.v
+F/export/home/016/a0163072/CPU/git/controller/controller.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/controller/controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/controller|/export/home/016/a0163072/CPU/git/controller/controller.v|
+!i113 1
+R5
+R10
+R7
+vDM
+R12
+!i10b 1
+!s100 01GQMZUZ6jXjSY`=A51Gj2
+IkI;7cD@ERj0g<_;OlZ56e3
+R2
+R0
+w1558590941
+8/export/home/016/a0163072/CPU/git/DM.v
+F/export/home/016/a0163072/CPU/git/DM.v
+Z14 L0 39
+R3
+r1
+!s85 0
+31
+R13
+!s107 /export/home/016/a0163072/CPU/git/DM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git|/export/home/016/a0163072/CPU/git/DM.v|
+!i113 1
+R5
+Z15 !s92 -vlog01compat -work work +incdir+/export/home/016/a0163072/CPU/git
+R7
+n@d@m
+vflopenable
+R1
+!i10b 1
+!s100 4dmgADVZb5TAzZ<=EzoIX0
+ICYXO[BzZj<Q][4W_8YZ3n0
+R2
+R0
+w1557469947
+8/export/home/016/a0163072/CPU/git/processor/flopenable.v
+F/export/home/016/a0163072/CPU/git/processor/flopenable.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/processor/flopenable.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/flopenable.v|
+!i113 1
+R5
+R6
+R7
+vflopenableEX
+R1
+!i10b 1
+!s100 [M6>Ce_U4ao6BhUlH_R7=0
+I64l37fHm[8[834VcMNEH03
+R2
+R0
+w1557392992
+8/export/home/016/a0163072/CPU/git/controller/flopenableEX.v
+F/export/home/016/a0163072/CPU/git/controller/flopenableEX.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/controller/flopenableEX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/controller|/export/home/016/a0163072/CPU/git/controller/flopenableEX.v|
+!i113 1
+R5
+R10
+R7
+nflopenable@e@x
+vflopenablepc
+R1
+!i10b 1
+!s100 ]2k^I08U55eBn=UCaU>P?1
+Ie:0a;0YAPoXlH^VObX8jB0
+R2
+R0
+w1557384566
+8/export/home/016/a0163072/CPU/git/processor/flopenablepc.v
+F/export/home/016/a0163072/CPU/git/processor/flopenablepc.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/processor/flopenablepc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/flopenablepc.v|
+!i113 1
+R5
+R6
+R7
+vflopr
+R8
+!i10b 1
+!s100 X]WXlock0Qh7E[02Wl9o?2
+IAe]]9?JJJJP4]eX:D]l1i3
+R2
+R0
+w1557384049
+8/export/home/016/a0163072/CPU/git/claptonver1/flopr.v
+F/export/home/016/a0163072/CPU/git/claptonver1/flopr.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/flopr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1|/export/home/016/a0163072/CPU/git/claptonver1/flopr.v|
+!i113 1
+R5
+R11
+R7
+vhazard
+R8
+!i10b 1
+!s100 S=G1<U45fV_D=j[3FUhd53
+IS;64V7=z873j[h0f7jA>k3
+R2
+R0
+w1558587992
+8/export/home/016/a0163072/CPU/git/processor/hazard.v
+F/export/home/016/a0163072/CPU/git/processor/hazard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 /export/home/016/a0163072/CPU/git/processor/hazard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/hazard.v|
+!i113 1
+R5
+R6
+R7
+vIM
+R12
+!i10b 1
+!s100 RL0`U1AQ3_7H`mQg?NohX2
+IgkjX0E?caain_Z[`0<i=^2
+R2
+R0
+w1558655893
+8/export/home/016/a0163072/CPU/git/IM.v
+F/export/home/016/a0163072/CPU/git/IM.v
+R14
+R3
+r1
+!s85 0
+31
+R13
+!s107 /export/home/016/a0163072/CPU/git/IM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git|/export/home/016/a0163072/CPU/git/IM.v|
+!i113 1
+R5
+R15
+R7
+n@i@m
+vmaindec
+R1
+!i10b 1
+!s100 mhF?1i^`C1M@jz:PZ`gRG0
+I52^;2Hzb3@[J6WPN`S[ZA0
+R2
+R0
+w1558596169
+8/export/home/016/a0163072/CPU/git/controller/maindec.v
+F/export/home/016/a0163072/CPU/git/controller/maindec.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/controller/maindec.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/controller|/export/home/016/a0163072/CPU/git/controller/maindec.v|
+!i113 1
+R5
+R10
+R7
+vmux2
+R1
+!i10b 1
+!s100 =mh`dJCNzB=;Q_jSHG[UF3
+IiYlG:8Tn>gjTA2HNzdQ030
+R2
+R0
+w1557208625
+8/export/home/016/a0163072/CPU/git/claptonver1/mux2.v
+F/export/home/016/a0163072/CPU/git/claptonver1/mux2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/mux2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1|/export/home/016/a0163072/CPU/git/claptonver1/mux2.v|
+!i113 1
+R5
+R11
+R7
+vmux3
+R8
+!i10b 1
+!s100 h1o>`TJ6VQ]Tk6Vze[23>0
+I<Ok]DdkfVQ4Yg_JcVTI4]0
+R2
+R0
+w1557220879
+8/export/home/016/a0163072/CPU/git/processor/mux3.v
+F/export/home/016/a0163072/CPU/git/processor/mux3.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 /export/home/016/a0163072/CPU/git/processor/mux3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/mux3.v|
+!i113 1
+R5
+R6
+R7
+vpcbranch
+R8
+!i10b 1
+!s100 ZlOe7Qz2dEnkOeM^KUkVH2
+I?]6JS5LLPSUh=Bd8:^>0j0
+R2
+R0
+w1557470747
+8/export/home/016/a0163072/CPU/git/processor/pcbranch.v
+F/export/home/016/a0163072/CPU/git/processor/pcbranch.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 /export/home/016/a0163072/CPU/git/processor/pcbranch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/pcbranch.v|
+!i113 1
+R5
+R6
+R7
+vprocessor
+R1
+!i10b 1
+!s100 iXO:P7mj79NgNc55Wj2Da3
+IfeaMYG?YCo9[d1GN3jVf>1
+R2
+R0
+Z16 w1558682456
+8/export/home/016/a0163072/CPU/git/processor/processor.v
+F/export/home/016/a0163072/CPU/git/processor/processor.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/processor/processor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/processor.v|
+!i113 1
+R5
+R6
+R7
+vregfile
+R8
+!i10b 1
+!s100 :kMi=jJ57WV8NFC3Aj6kB2
+IYT3=1zH2JV;=ZVZBk;Z:O1
+R2
+R0
+R16
+8/export/home/016/a0163072/CPU/git/processor/regfile.v
+F/export/home/016/a0163072/CPU/git/processor/regfile.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/processor/regfile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/regfile.v|
+!i113 1
+R5
+R6
+R7
+vsignext
+R8
+!i10b 1
+!s100 ;QXVQ[>kobP88aW68[bo?0
+Ia>9kOT^F?W4Fok9KH^77;1
+R2
+R0
+w1558595988
+8/export/home/016/a0163072/CPU/git/processor/signext.v
+F/export/home/016/a0163072/CPU/git/processor/signext.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 /export/home/016/a0163072/CPU/git/processor/signext.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/processor|/export/home/016/a0163072/CPU/git/processor/signext.v|
+!i113 1
+R5
+R6
+R7
+vswitch
+R1
+!i10b 1
+!s100 9CehQ9<ghAGOcAhY<0UJ`0
+I5K>;;N7293dZfI2VHXUam2
+R2
+R0
+w1558080141
+8/export/home/016/a0163072/CPU/git/claptonver1/switch.v
+F/export/home/016/a0163072/CPU/git/claptonver1/switch.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /export/home/016/a0163072/CPU/git/claptonver1/switch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/export/home/016/a0163072/CPU/git/claptonver1|/export/home/016/a0163072/CPU/git/claptonver1/switch.v|
+!i113 1
+R5
+R11
+R7

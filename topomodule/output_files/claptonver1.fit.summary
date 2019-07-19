@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri May 31 16:01:00 2019
+Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Standard Edition
+Revision Name : claptonver1
+Top-level Entity Name : claptonver1
+Family : Cyclone IV E
+Device : EP4CE30F23I7
+Timing Models : Final
+Total logic elements : 1,301 / 28,848 ( 5 % )
+    Total combinational functions : 1,228 / 28,848 ( 4 % )
+    Dedicated logic registers : 557 / 28,848 ( 2 % )
+Total registers : 557
+Total pins : 180 / 329 ( 55 % )
+Total virtual pins : 0
+Total memory bits : 131,072 / 608,256 ( 22 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
